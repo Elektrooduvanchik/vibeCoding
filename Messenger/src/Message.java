@@ -1,6 +1,6 @@
 public class Message {
-	public id;
-	private String from;
-	private String to;
+	public final id;
+	private final String from;
+	private final String to;
 	private String soobshcheniye;
 }
