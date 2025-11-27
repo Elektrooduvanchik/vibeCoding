@@ -1,6 +1,3 @@
-
-
-
 import java.util.HashSet;
 
 public class Channel {
@@ -8,6 +5,7 @@ public class Channel {
     public String name;
     public User owner;
     public HashSet<User> listUsers;
+    public
 
 
     public Channel(User owner,String name){
@@ -21,6 +19,9 @@ public class Channel {
     }
     public void printSubscribers(){
         System.out.println("Количество подписчиков" + listUsers.size());
+    }
+    public void sendMessage(){
+
     }
 }
 
