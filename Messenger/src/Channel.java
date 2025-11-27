@@ -6,8 +6,6 @@ public class Channel {
     public User owner;
     public HashSet<User> listUsers;
 
-    public
-
 
     public Channel(User owner, String name) {
         this.name = name;
@@ -30,6 +28,7 @@ public class Channel {
         for (Message m : message) {
             System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
         }
+        System.out.println();
 
     }
 }
