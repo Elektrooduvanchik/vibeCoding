@@ -10,11 +10,8 @@ public class Message {
 		this.to = to;
 		this.soobshcheniye = text;
 	}
-    public Message(long id, String from,String text) {
-        this.id = id;
-        this.from = from;
-        this.soobshcheniye = text;
-    }
+
+
 
 	public void setSoobshcheniye(String text) {
 		this.soobshcheniye = text;
