@@ -1,16 +1,16 @@
-import java.util.HashSet;
+import java.util.ArrayList;
 
 public class Channel {
     public Channel chanel;
     public String name;
     public User owner;
-    public HashSet<User> listUsers;
+    public ArrayList<User> listUsers;
 
 
     public Channel(User owner, String name) {
         this.name = name;
         this.owner = owner;
-        this.listUsers = new HashSet<>();
+        this.listUsers = new ArrayList<>();
     }
 
     public void addUser(User user) {
