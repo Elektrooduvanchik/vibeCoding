@@ -12,6 +12,24 @@ public class User {
 
     public User(String name) {
         this.name = name;
+    }
 
+    public void sendMessage(User user, String message) {
+        System.out.println("Сообщение отправлено");
+        id++;
+    }
+
+    public void sendMessage(Group group, String message) {
+        System.out.println("Сообщение отправлено");
+        id++;
+    }
+
+    public void sendMessage(Channel channel, String message) {
+        if (channel.getOwner.equals(user)) {
+            System.out.println("Сообщение отправлено");
+            id++;
+        } else {
+            System.out.println("Недостаточно прав");
+        }
     }
 }
