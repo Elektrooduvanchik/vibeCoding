@@ -5,27 +5,30 @@ public class Channel {
     public String name;
     public User owner;
     public HashSet<User> listUsers;
+
     public
 
 
-    public Channel(User owner,String name){
-        this.name=name;
-        this.owner=owner;
-        this.listUsers=new HashSet<>();
+    public Channel(User owner, String name) {
+        this.name = name;
+        this.owner = owner;
+        this.listUsers = new HashSet<>();
     }
 
-    public void addUser(User user){
+    public void addUser(User user) {
         listUsers.add(user);
     }
-    public void printSubscribers(){
+
+    public void printSubscribers() {
         System.out.println("Количество подписчиков" + listUsers.size());
-        for (User u : listUsers){
-            System.out.println(u);
+        for (User u : listUsers) {
+            System.out.print(u);
         }
     }
-    public void printMessages(){
-        for (Message m : message){
-            System.out.println(m.getFrom()+": "+m.getSoobshcheniye());
+
+    public void printMessages() {
+        for (Message m : message) {
+            System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
         }
 
     }
