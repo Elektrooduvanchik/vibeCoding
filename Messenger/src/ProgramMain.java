@@ -61,5 +61,6 @@ public class ProgramMain {
 				"И если маскою черты утаены,\n" +
 				"То маску с чувств снимают смело.");
 		mascarad.printSubscribers();
+		mascarad.printMessages();
 	}
 }
