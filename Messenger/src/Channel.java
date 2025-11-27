@@ -22,13 +22,14 @@ public class Channel {
         for (User u : listUsers) {
             System.out.print(u);
         }
+        System.out.println();
     }
 
     public void printMessages() {
         for (Message m : message) {
             System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
         }
-        System.out.println();
+
 
     }
 }
