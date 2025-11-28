@@ -14,7 +14,6 @@ public class ProgramMain {
 		group1.addUser(punter_2);
 		group1.addUser(punter_3);
 		group1.addUser(punter_4);
-		group1.addUser(knyaz_zvezdich);
 		group1.addUser(knyaz);
 		group1.addUser(shprikh);
 
@@ -22,7 +21,7 @@ public class ProgramMain {
 		banker.sendMessage(group1, "Извольте.");
 		punter_1.sendMessage(group1, "Сто рублей.");
 		banker.sendMessage(group1, "Идет.");
-		punter_2.sendMessage(group1, "Ну, добрый путь");
+		punter_2.sendMessage(group1, "Ну, добрый путь.");
 		punter_3.sendMessage(group1, "Вам надо счастие поправить,\n" +
 				"А семпелями плохо…");
 		punter_4.sendMessage(group1, "Надо гнуть.");
@@ -43,7 +42,7 @@ public class ProgramMain {
 		knyaz.sendMessage(group1, "Я с честью их достал, – и вам их не купить.");
 		punter_2.sendMessage(group1, "Скромней бы надо быть\n" +
 				"С таким несчастием и в ваши леты.");
-		shprikh.sendMessage(group1, "Не нужно ль денег, князь… я тотчас помогу,\n" +
+		shprikh.sendMessage(group1, "Не нужно ль денег, князь… я тотчас помогу.\n" +
 				"Проценты вздорные… а ждать сто лет могу.");
 
 		group1.printUsers();
