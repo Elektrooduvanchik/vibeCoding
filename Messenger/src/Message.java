@@ -1,11 +1,13 @@
+import java.util.Random;
+
 public class Message {
-	public final long id;
+	public long id = 1;
 	private final String from;
 	private final String to;
 	private String soobshcheniye;
 
-	public Message(long id, String from, String to, String text) {
-		this.id = id;
+	public Message(String from, String to, String text) {
+		this.id = random.nextInt(0, 10000000000000);
 		this.from = from;
 		this.to = to;
 		this.soobshcheniye = text;
