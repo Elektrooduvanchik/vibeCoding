@@ -4,21 +4,36 @@ public class Channel {
     public Channel chanel;
     public String name;
     public User owner;
-    public ArrayList<User> listUsers;
+    public User[] listUsers;
 
+    public Message[] message = new Message[0];
+
+    public void addMessage(Message msg) {
+        Message[] newArr = new Message[message.length + 1];
+        for (int i = 0; i < message.length; i++) {
+            newArr[i] = message[i];
+        }
+        newArr[newArr.length - 1] = msg;
+        message = newArr;
+    }
 
     public Channel(User owner, String name) {
         this.name = name;
         this.owner = owner;
-        this.listUsers = new ArrayList<>();
+        this.listUsers = new User[0];
     }
 
     public void addUser(User user) {
-        listUsers.add(user);
+        User[] newArr = new User[listUsers.length+1];
+        for (int i=0;i<listUsers.length;i++){
+            newArr[i]=listUsers[i];
+        }
+        newArr[newArr.length-1]=user;
+        listUsers = newArr;
     }
 
     public void printSubscribers() {
-        System.out.println("Количество подписчиков" + listUsers.size());
+        System.out.println("Количество подписчиков" + listUsers.length);
         for (User u : listUsers) {
             System.out.print(u);
         }
@@ -26,9 +41,9 @@ public class Channel {
     }
 
     public void printMessages() {
-        for (Message m : message) {
-            System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
-        }
+        for (Message m : message){
+                System.out.println(m.getFrom() + ": " + m.getSoobshcheniye()) ;
+    }
 
 
     }
