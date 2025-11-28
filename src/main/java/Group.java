@@ -18,7 +18,7 @@ public class Group {
     public void printUsers(){
         System.out.println("Количество участников: " + listUsers.length);
         for (User user : listUsers){
-            System.out.println(user);
+            System.out.print(user + "  " + user.getid + "| ");
         }
     }
 
