@@ -48,9 +48,9 @@ public class Channel {
     }
 
     public void printSubscribers() {
-        System.out.println("Количество подписчиков" + listUsers.length);
+        System.out.println("Количество подписчиков: " + listUsers.length);
         for (User u : listUsers) {
-            System.out.print(u);
+            System.out.print(u.getName());
         }
         System.out.println();
     }

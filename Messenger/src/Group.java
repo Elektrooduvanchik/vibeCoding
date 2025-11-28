@@ -19,14 +19,16 @@ public class Group {
 
     public void printUsers(){
         System.out.println("Количество участников: " + listUsers.length);
+        System.out.print("|  ");
         for (User user : listUsers) {
-            System.out.print(user + "  |  ");
+            System.out.print(user.getName() + "  |  ");
         }
+        System.out.println();
     }
 
     public void printMessages(){
         for (Message varMessage : message) {
-            System.out.println(varMessage.id + " - " + varMessage.getFrom()
+            System.out.println(varMessage.getId() + " - " + varMessage.getFrom()
                     + " → " + varMessage.getTo() + ": " + varMessage.getSoobshcheniye());
         }
     }
