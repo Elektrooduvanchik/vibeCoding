@@ -1,11 +1,11 @@
 public class Message {
-	public final long id;
+	public long id = 1;
 	private final String from;
 	private final String to;
 	private String soobshcheniye;
 
-	public Message(long id, String from, String to, String text) {
-		this.id = id;
+	public Message(String from, String to, String text) {
+		this.id = this.id++;
 		this.from = from;
 		this.to = to;
 		this.soobshcheniye = text;
