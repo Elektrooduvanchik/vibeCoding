@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class User {
 	private String name;
     private static long id = 0;
@@ -18,26 +16,20 @@ public class User {
         this.name = name;
     }
 
-    public void sendMessage(User user, Message message) {
-        System.out.println("Введите сообщение:");
-        String text = sc.nextLine();
+    public void sendMessage(User user, String text) {
         id++;
         Message message = new Message(id, name, user.getName(), text);
         System.out.println("Сообщение отправлено");
     }
 
-    public void sendMessage(Group group, Message message) {
-        System.out.println("Введите сообщение:");
-        String text = sc.nextLine();
+    public void sendMessage(Group group, String text) {
         id++;
         Message message = new Message(id, name, group.getName(), text);
         System.out.println("Сообщение отправлено");
     }
 
-    public void sendMessage(Channel channel, Message message) {
+    public void sendMessage(Channel channel, String text) {
         if (channel.getOwner.equals(user)) {
-            System.out.println("Введите сообщение:");
-            String text = sc.nextLine();
             id++;
             Message message = new Message(id, name, channel.getName(), text);
             System.out.println("Сообщение отправлено");
