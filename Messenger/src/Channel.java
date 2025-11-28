@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Channel {
     public Channel chanel;
     public String name;
