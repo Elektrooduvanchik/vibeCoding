@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Message {
 	public long id = 1;
 	private final String from;
@@ -5,7 +7,7 @@ public class Message {
 	private String soobshcheniye;
 
 	public Message(String from, String to, String text) {
-		this.id = this.id++;
+		this.id = random.nextInt(0, 10000000000000);
 		this.from = from;
 		this.to = to;
 		this.soobshcheniye = text;
