@@ -3,6 +3,7 @@ public class Channel {
     private String name;
     private User owner;
     private User[] listUsers;
+    public Message[] message = new Message[0];
 
     public String getName() {
         return name;
@@ -28,9 +29,6 @@ public class Channel {
         this.listUsers = listUsers;
     }
 
-    public Message[] message = new Message[0];
-
-
 
     public Channel(User owner, String name) {
         this.name = name;
@@ -39,11 +37,11 @@ public class Channel {
     }
 
     public void addUser(User user) {
-        User[] newArr = new User[listUsers.length+1];
-        for (int i=0;i<listUsers.length;i++){
-            newArr[i]=listUsers[i];
+        User[] newArr = new User[listUsers.length + 1];
+        for (int i = 0; i < listUsers.length; i++) {
+            newArr[i] = listUsers[i];
         }
-        newArr[newArr.length-1]=user;
+        newArr[newArr.length - 1] = user;
         listUsers = newArr;
     }
 
@@ -56,9 +54,9 @@ public class Channel {
     }
 
     public void printMessages() {
-        for (Message m : message){
-                System.out.println(m.getFrom() + ": " + m.getSoobshcheniye()) ;
-    }
+        for (Message m : message) {
+            System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
+        }
 
 
     }
