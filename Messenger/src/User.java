@@ -1,8 +1,5 @@
 public class User {
 	private String name;
-    private static long id = 0;
-    Scanner sc = new Scanner(System.in);
-
 
     public String getName() {
         return name;
@@ -17,21 +14,18 @@ public class User {
     }
 
     public void sendMessage(User user, String text) {
-        id++;
-        Message message = new Message(id, name, user.getName(), text);
+        Message message = new Message(name, user.getName(), text);
         System.out.println("Сообщение отправлено");
     }
 
     public void sendMessage(Group group, String text) {
-        id++;
-        Message message = new Message(id, name, group.getName(), text);
+        Message message = new Message(name, group.getName(), text);
         System.out.println("Сообщение отправлено");
     }
 
     public void sendMessage(Channel channel, String text) {
         if (channel.getOwner.equals(user)) {
-            id++;
-            Message message = new Message(id, name, channel.getName(), text);
+            Message message = new Message(name, channel.getName(), text);
             System.out.println("Сообщение отправлено");
         } else {
             System.out.println("Недостаточно прав");
