@@ -8,13 +8,21 @@ public class Channel {
 
     public Message[] message = new Message[0];
 
-    public void addMessage(Message msg) {
-        Message[] newArr = new Message[message.length + 1];
-        for (int i = 0; i < message.length; i++) {
-            newArr[i] = message[i];
+
+    public void printHistory() {
+        System.out.println("История сообщений канала \"" + name + "\":");
+        System.out.println("--------------------------------------");
+
+        if (message.length == 0) {
+            System.out.println("История пуста.");
+            return;
         }
-        newArr[newArr.length - 1] = msg;
-        message = newArr;
+
+        for (Message m : message) {
+            System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
+        }
+
+        System.out.println("--------------------------------------");
     }
 
     public Channel(User owner, String name) {
