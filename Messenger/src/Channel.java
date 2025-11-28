@@ -1,27 +1,36 @@
 public class Channel {
-    public Channel chanel;
-    public String name;
-    public User owner;
-    public User[] listUsers;
+
+    private String name;
+    private User owner;
+    private User[] listUsers;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public User[] getListUsers() {
+        return listUsers;
+    }
+
+    public void setListUsers(User[] listUsers) {
+        this.listUsers = listUsers;
+    }
 
     public Message[] message = new Message[0];
 
 
-    public void printHistory() {
-        System.out.println("История сообщений канала \"" + name + "\":");
-        System.out.println("--------------------------------------");
-
-        if (message.length == 0) {
-            System.out.println("История пуста.");
-            return;
-        }
-
-        for (Message m : message) {
-            System.out.println(m.getFrom() + ": " + m.getSoobshcheniye());
-        }
-
-        System.out.println("--------------------------------------");
-    }
 
     public Channel(User owner, String name) {
         this.name = name;
