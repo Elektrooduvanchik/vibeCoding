@@ -17,6 +17,15 @@ public class Group {
         listUsers[listUsers.length -1] = user;
     }
 
+    public void addMessageToGroup(Message message1){
+        Message[] buffer = new Message[message.length+1];
+        for (int i=0;i<message.length;i++){
+            buffer[i]=message[i];
+        }
+        buffer[buffer.length-1]=message1;
+        message = buffer;
+    }
+
     public void printUsers(){
         System.out.println("Количество участников: " + listUsers.length);
         System.out.print("|  ");
