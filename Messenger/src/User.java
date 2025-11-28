@@ -29,6 +29,7 @@ public class User {
     public void sendMessage(Channel channel, String text) {
         if (channel.getOwner().getUserId() == user_id) {
             Message message = new Message(name, channel.getName(), text);
+            channel.addMessageToChan(message);
             System.out.println("Сообщение отправлено в канал под названием " + channel.getName() + ": \n" + text);
         } else {
             System.out.println("Недостаточно прав, чтобы совершить действие");

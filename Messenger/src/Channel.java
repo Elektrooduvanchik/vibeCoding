@@ -28,7 +28,7 @@ public class Channel {
         this.listUsers = listUsers;
     }
 
-    public Message[] message = new Message[0];
+    private Message[] message = new Message[0];
 
 
 
@@ -36,6 +36,15 @@ public class Channel {
         this.name = name;
         this.owner = owner;
         this.listUsers = new User[0];
+    }
+
+    public void addMessageToChan(Message message1){
+        Message[] buffer = new Message[message.length+1];
+        for (int i=0;i<message.length;i++){
+            buffer[i]=message[i];
+        }
+        buffer[buffer.length-1]=message1;
+        message = buffer;
     }
 
     public void addUser(User user) {
@@ -56,8 +65,9 @@ public class Channel {
     }
 
     public void printMessages() {
+        System.out.println("История канала " + name);
         for (Message m : message){
-                System.out.println(m.getFrom() + ": " + m.getSoobshcheniye()) ;
+                System.out.println(m.getFrom() + ": \n" + m.getSoobshcheniye()) ;
     }
 
 
