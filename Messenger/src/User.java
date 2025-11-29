@@ -59,7 +59,9 @@ public class User {
     public void printDM(User user2) {
         System.out.println("Чат " + "пользователя" + name +" с пользователем" + user2.getName());
         for (Message m : message) {
-            System.out.println(m.getFrom() + ": \n" + m.getSoobshcheniye());
+            if (m.getFrom().equals(name) && m.getTo().equals(user2.getName())) {
+                System.out.println(m.getFrom() + ": \n" + m.getSoobshcheniye());
+            }
         }
     }
 }
