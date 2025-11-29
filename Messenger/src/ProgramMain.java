@@ -50,7 +50,7 @@ public class ProgramMain {
 
 		User arbenin = new User("Арбенин");
 		arbenin.sendMessage(knyaz, "Что, князь?.. не набрели еще на приключенье?");
-		knyaz.sendMessage(knyaz, "Как быть, а целый час хожу!");
+		knyaz.sendMessage(arbenin, "Как быть, а целый час хожу!");
 
 		Channel mascarad = new Channel(arbenin, "Маскарад");
 		mascarad.addUser(knyaz);
