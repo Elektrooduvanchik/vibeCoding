@@ -55,8 +55,8 @@ public class User {
         return user_id;
     }
 
-    public void printDM(User user1, User user2) {
-        System.out.println("Чат " + "пользователя" + user1 +" с пользователем" + user1.getName());
+    public void printDM(User user2) {
+        System.out.println("Чат " + "пользователя" + name +" с пользователем" + user2.getName());
         for (Message m : message) {
             System.out.println(m.getFrom() + ": \n" + m.getSoobshcheniye());
         }
