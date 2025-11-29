@@ -38,7 +38,7 @@ public class Group {
     public void printMessages(){
         for (Message varMessage : message) {
             System.out.println(varMessage.getId() + " - " + varMessage.getFrom()
-                    + " → " + varMessage.getTo() + ": " + varMessage.getSoobshcheniye());
+                    + " -> " + varMessage.getTo() + ": " + varMessage.getSoobshcheniye());
         }
     }
 
