@@ -19,6 +19,7 @@ public class User {
 
     public void sendMessage(User user, String text) {
         Message message = new Message(name, user.getName(), text);
+        user.addMessageDM(message);
         System.out.println("Сообщение отправлено пользователю под ником " + user.getName() + ": \n" + text);
     }
 
